@@ -76,8 +76,8 @@
         function getRandomChallenge() {
             const randomIndex = Math.floor(Math.random() * challenges.length);
             document.getElementById("challengeText").innerText = challenges[randomIndex];
-            document.getElementById("instructionText").innerText = "📸 Show your selfie to the photographer to earn an extra raffle ticket! 🎟️";
-            document.getElementById("noteText").innerText = "🔄 Don't like your challenge? Press the button again for a new one!";
+            document.getElementById("instructionText").innerText = "📸 Show your selfie to the photographer to earn ONE extra raffle ticket! 🎟️ (Only ONE extra entry per person)";
+            document.getElementById("noteText").innerText = "🔄 Don't like your challenge? Press the button again to get a different one!";
         }
     </script>
 </head>
@@ -92,4 +92,3 @@
     </div>
 </body>
 </html>
-
