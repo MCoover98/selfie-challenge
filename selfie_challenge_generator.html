@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Random Selfie Challenge</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            background-color: #ffe6e6;
+            padding: 50px;
+        }
+        .container {
+            max-width: 500px;
+            margin: auto;
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+        }
+        h1 {
+            color: #d6336c;
+        }
+        .challenge {
+            font-size: 24px;
+            font-weight: bold;
+            margin: 20px 0;
+        }
+        button {
+            background-color: #d6336c;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            font-size: 18px;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+        button:hover {
+            background-color: #b52b5b;
+        }
+    </style>
+    <script>
+        const challenges = [
+            "Take a selfie with the best-dressed guest you can find.",
+            "Take a mirror selfie with your drink.",
+            "Get a group of 4+ people in a selfie.",
+            "Take a dramatic black-and-white selfie.",
+            "Pose like you're on a magazine cover.",
+            "Take a 'cheers' selfie clinking glasses with someone.",
+            "Find a couple & take a photobomb selfie behind them.",
+            "Take a bad prom photo pose selfie.",
+            "Do a serious, dramatic 'album cover' selfie.",
+            "Take a 'mystery detective' selfie (wear a jacket like a trench coat).",
+            "Find someone who matches your outfit & take a 'twin' selfie.",
+            "Take a photo with someone making the same face as you.",
+            "Take a selfie with the host or event organizer!",
+            "Take a selfie with someone wearing the same color as you.",
+            "Take a selfie next to the guessing jar & pretend you know the answer.",
+            "Take a photo with someone holding up their Valentine card from the DIY station."
+        ];
+        
+        function getRandomChallenge() {
+            const randomIndex = Math.floor(Math.random() * challenges.length);
+            document.getElementById("challengeText").innerText = challenges[randomIndex];
+        }
+    </script>
+</head>
+<body>
+    <div class="container">
+        <h1>📸 Random Selfie Challenge! 📸</h1>
+        <p>Tap the button to get a new selfie challenge!</p>
+        <div class="challenge" id="challengeText">Click below for a challenge!</div>
+        <button onclick="getRandomChallenge()">🎲 Get Challenge</button>
+    </div>
+</body>
+</html>
