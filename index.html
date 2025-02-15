@@ -25,6 +25,12 @@
             font-weight: bold;
             margin: 20px 0;
         }
+        .instruction {
+            font-size: 18px;
+            font-weight: bold;
+            color: #b52b5b;
+            margin-top: 10px;
+        }
         button {
             background-color: #d6336c;
             color: white;
@@ -57,13 +63,13 @@
             "Take a selfie acting like you're lost at the party.",
             "Take a selfie where you dramatically stare off into the distance.",
             "Take a selfie with someone doing the best fake laugh.",
-            "Take a selfie where everyone looks completely unamused.",
-            "Take a classy 'red carpet' style selfie with your drink." 
+            "Take a classy 'red carpet' style selfie with your drink."
         ];
         
         function getRandomChallenge() {
             const randomIndex = Math.floor(Math.random() * challenges.length);
             document.getElementById("challengeText").innerText = challenges[randomIndex];
+            document.getElementById("instructionText").innerText = "📸 Show your selfie to the photographer to earn an extra raffle ticket! 🎟️";
         }
     </script>
 </head>
@@ -72,6 +78,7 @@
         <h1>📸 Random Selfie Challenge! 📸</h1>
         <p>Tap the button to get a new selfie challenge!</p>
         <div class="challenge" id="challengeText">Click below for a challenge!</div>
+        <div class="instruction" id="instructionText"></div>
         <button onclick="getRandomChallenge()">🎲 Get Challenge</button>
     </div>
 </body>
