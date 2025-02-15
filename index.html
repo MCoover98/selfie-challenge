@@ -76,7 +76,7 @@
         function getRandomChallenge() {
             const randomIndex = Math.floor(Math.random() * challenges.length);
             document.getElementById("challengeText").innerText = challenges[randomIndex];
-            document.getElementById("instructionText").innerText = "📸 Scan the QR code or click the link to upload your selfie to the event album!";
+            document.getElementById("instructionText").innerText = "Click the link to upload your selfie to the event album!";
             document.getElementById("uploadLink").innerHTML = '<a href="https://app.kululu.com/paicun" target="_blank">📤 Click to Upload Your Selfie!</a>';
             document.getElementById("noteText").innerText = "🔄 Don't like your challenge? Press the button again to get a different one!";
         }
