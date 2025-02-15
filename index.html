@@ -31,6 +31,12 @@
             color: #b52b5b;
             margin-top: 10px;
         }
+        .note {
+            font-size: 16px;
+            font-style: italic;
+            margin-top: 10px;
+            color: #333;
+        }
         button {
             background-color: #d6336c;
             color: white;
@@ -55,6 +61,7 @@
             "Find someone who matches your outfit & take a 'twin' selfie.",
             "Take a photo with someone making the same face as you.",
             "Take a selfie with the host or event organizer!",
+            "Take a selfie with the photographer!",
             "Take a selfie with someone wearing the same color as you.",
             "Take a selfie next to the guessing jar.",
             "Take a selfie giving your best 'side-eye' reaction.",
@@ -70,6 +77,7 @@
             const randomIndex = Math.floor(Math.random() * challenges.length);
             document.getElementById("challengeText").innerText = challenges[randomIndex];
             document.getElementById("instructionText").innerText = "📸 Show your selfie to the photographer to earn an extra raffle ticket! 🎟️";
+            document.getElementById("noteText").innerText = "🔄 Don't like your challenge? Press the button again for a new one!";
         }
     </script>
 </head>
@@ -79,7 +87,9 @@
         <p>Tap the button to get a new selfie challenge!</p>
         <div class="challenge" id="challengeText">Click below for a challenge!</div>
         <div class="instruction" id="instructionText"></div>
+        <div class="note" id="noteText"></div>
         <button onclick="getRandomChallenge()">🎲 Get Challenge</button>
     </div>
 </body>
 </html>
+
